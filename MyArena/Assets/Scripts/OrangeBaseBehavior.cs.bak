@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class OrangeBaseBehavior : MonoBehaviour
+{
+    
+	void OnCollisionEnter(Collision collision)
+	
+	{
+		if(collision.gameObject.name == "Player" && BlueFlagBehavior.hasBlueFlag = true )
+		{
+			//if(BlueFlagBehavior.hasBlueFlag = true)
+			Debug.Log("You win!");
+			
+			hasBlueFlag = false;
+		}
+	}
+}
