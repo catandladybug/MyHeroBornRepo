@@ -47,6 +47,8 @@ public class FlagEnemyBehavior : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         _col = GetComponent<CapsuleCollider>();
 
+        _rb.isKinematic = true;
+
     }
 
     private void Update()
@@ -93,6 +95,28 @@ public class FlagEnemyBehavior : MonoBehaviour
             Debug.Log("Critical hit!");
 
         }
+
+        if (collision.gameObject.name == "Trigger3") 
+        { 
+        
+             _rb.isKinematic = false;
+
+        }
+
+        if (collision.gameObject.name == "Trigger1")
+        {
+
+            _rb.isKinematic = true;
+
+        }
+
+        if (collision.gameObject.name == "Trigger2")
+        {
+
+            _rb.isKinematic = false;
+
+        }
+
     }
 
     public GameObject myHat;

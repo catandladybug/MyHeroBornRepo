@@ -11,7 +11,7 @@ public class ItemBehavior : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-            Destroy(this.transform.parent.gameObject);
+            Destroy(this.transform.gameObject);
             Debug.Log("JUMP BOOST!");
 
             PlayerBehavior Player = collision.gameObject.GetComponent<PlayerBehavior>();
