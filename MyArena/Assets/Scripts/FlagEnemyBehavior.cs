@@ -47,7 +47,7 @@ public class FlagEnemyBehavior : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         _col = GetComponent<CapsuleCollider>();
 
-        _rb.isKinematic = true;
+        //_rb.isKinematic = true;
 
     }
 
